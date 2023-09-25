@@ -27,16 +27,16 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 # docker
 ```
-docker build . -t bs5-proto
+docker build . -t bootstrap-demo
 
 docker network create microNetwork
 
-# docker run --rm --name bs5-proto --network microNetwork -p 3000:3000 bs5-proto
+# docker run --rm --name bootstrap-demo --network microNetwork -p 3000:3000 bootstrap-demo
 
-docker run --rm --name bs5-proto -p 3000:3000 bs5-proto
+docker run --rm --name bootstrap-demo -p 3000:3000 bootstrap-demo
 
 # access docker shell
-docker exec -it bs5-proto bash
+docker exec -it bootstrap-demo bash
 
 # check exists
 docker image ls
@@ -44,7 +44,7 @@ docker image ls
 
 # gcloud deploy
 ```
-gcloud builds submit --tag gcr.io/pfolio-deploy-1/bs5-proto
+gcloud builds submit --tag gcr.io/pfolio-deploy-1/bootstrap-demo
 
-gcloud run deploy --image gcr.io/pfolio-deploy-1/bs5-proto --platform managed --port=3000
+gcloud run deploy --image gcr.io/pfolio-deploy-1/bootstrap-demo --platform managed --port=3000
 ```
